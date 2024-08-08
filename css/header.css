@@ -1,0 +1,39 @@
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 5px 15px 10px 15px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.menu-bar__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+}
+
+.menu-bar__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 1000;
+  padding-left: 110px;
+}
+
+.menu-bar__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-bar__right-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  width: 30px;
+}
