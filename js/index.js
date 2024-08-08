@@ -86,7 +86,38 @@ function appStart() {
       index += 1;
     }
   };
+
+  const handleClick = (key) => {
+    const keyCode = key.toUpperCase();
+    const thisBlock = document.querySelector(
+      `.board-block[data-index='${attempts}${index}']`
+    );
+
+    if (keyCode === "BACK") {
+      handleBackspace();
+    } else if (keyCode === "ENTER") {
+      handleEnterKey();
+    } else if (keyCode.length === 1 && /[A-Z]/.test(keyCode)) {
+      thisBlock.innerText = keyCode;
+      index += 1;
+    }
+  };
+
+  const keyboardEvents = () => {
+    const keyboardKeys = document.querySelectorAll(
+      ".keyborad-block, .keyborad-block__enter, .keyborad-block__delete"
+    );
+
+    keyboardKeys.forEach((keyElement) => {
+      keyElement.addEventListener("click", () => {
+        const key = keyElement.getAttribute("data-key");
+        handleClick(key);
+      });
+    });
+  };
+
   startTimer();
+  keyboardEvents();
   window.addEventListener("keydown", handleKeydown);
 }
 
