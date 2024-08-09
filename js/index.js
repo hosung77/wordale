@@ -58,6 +58,7 @@ function appStart() {
       );
       const 입력한_글자 = block.innerText;
       const 정답_글자 = 정답[i];
+
       if (입력한_글자 === 정답_글자) {
         맞은_갯수 += 1;
         block.style.background = "#6AAA64";
@@ -116,8 +117,8 @@ function appStart() {
     });
   };
 
-  startTimer();
   keyboardEvents();
+  startTimer();
   window.addEventListener("keydown", handleKeydown);
 }
 
